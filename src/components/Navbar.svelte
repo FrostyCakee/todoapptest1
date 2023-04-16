@@ -1,9 +1,10 @@
 <script>
     import {supabase} from "../supabase.js";
-
+    import {goto} from '$app/navigation';
     const logout = () => {
         console.log("log out");
         supabase.auth.signOut();
+        goto("/")
     }
 </script>
 

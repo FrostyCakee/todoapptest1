@@ -1,5 +1,7 @@
 <script>
     import {supabase} from "../supabase.js";
+    import { goto } from '$app/navigation';
+  
 
     // let loading = false;
     let email = '';
@@ -30,6 +32,7 @@
   
       if (data) {
         console.log("auth ok", data);
+        goto("/todo")
       } else {
         console.log("auth err ", error);
       }
@@ -37,7 +40,7 @@
     
 </script>
 
-<h1 class="text-2xl font-bold text-center text-gray-800 md:text-3xl">ToDo List App / Log In</h1>
+<h1 class="text-2xl font-bold text-center text-gray-800 md:text-3xl">Log In</h1>
 <p class="text-center mt-2">Sign in via your email & password.</p>
 
 <form on:submit|preventDefault={handleLogin}>

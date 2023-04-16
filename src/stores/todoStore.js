@@ -18,10 +18,12 @@ export const addTodo = async (text, user_id) => {
 
    if(error){
     return console.error(error);
+   } else {
+    loadTodos();
    }
 
     console.log(data);
-    todos.update((cur) => [...cur, data[0]]);
+    // todos.update((cur) => [...cur, data[0]]);
     
 };
 
@@ -30,8 +32,10 @@ export const deleteTodo = async (id) => {
 
     if(error){
         return console.error(error);
-    }
-    todos.update((todos) => todos.filter((todo) => todo.id !== id));
+       } else {
+        loadTodos();
+       }
+//     todos.update((todos) => todos.filter((todo) => todo.id !== id));
 };
 
 export const toggleTodoCompleted = async (id, currentState) => {

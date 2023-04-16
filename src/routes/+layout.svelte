@@ -6,6 +6,7 @@
 	import { loadTodos } from "../stores/todoStore.js";
 	import Navbar from "../components/Navbar.svelte";
 	import Reg from "../components/Reg.svelte";
+	import Navbar1 from "../components/Navbar1.svelte";
 	console.log(supabase);
 
     // console.log(supabase.auth.getUser());
@@ -24,7 +25,9 @@
 	    <Navbar/>
         <slot></slot>
     {:else}
-        <Auth/>
-        <Reg/>
+        <Navbar1/>
+        <slot></slot>
+        <!-- <Auth/>
+        <Reg/> -->
 	{/if}
 </div>

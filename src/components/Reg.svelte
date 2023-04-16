@@ -1,6 +1,6 @@
 <script>
     import {supabase} from "../supabase.js";
-
+    import { goto } from '$app/navigation';
 
     let email = '';
     let password = '';
@@ -14,6 +14,7 @@
     //if(error)
       if (data) {
         console.log("reg ok", data);
+        goto("/todo")
       } else {
         console.log("reg err ", error);
       }
