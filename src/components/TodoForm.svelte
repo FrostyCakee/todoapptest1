@@ -1,9 +1,11 @@
 <script>
     import {addTodo} from "../stores/todoStore.js";
-    import { user } from "../stores/authStore.js";
+	import { supabase } from "../supabase.js";
+    //import { user } from "../stores/authStore.js";
     let todo = '';
-    const handleSubmit = () => {
-        addTodo(todo, $user.id);
+    const handleSubmit = async () => {
+        const { data, error } = await supabase.auth.getUser();
+        addTodo(todo, data.user.id);
         todo = '';
         console.log("submitting")
     }

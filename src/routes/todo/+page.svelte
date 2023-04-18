@@ -10,8 +10,4 @@
     {#each $todos as todo}
     <Todo todo={todo} index={todo.id}/>
     {/each}
-
-    <!-- <button href="/login">
-        desfsaedf
-    </button> -->
 </main>

@@ -11,15 +11,12 @@
       email: email,
       password: password,
     })
-    //if(error)
-      if (data) {
+    if(error) alert("error reg")
+    else {
         console.log("reg ok", data);
         goto("/todo")
-      } else {
-        console.log("reg err ", error);
-      }
+      } 
     }
-    
 </script>
 
 <h1 class="text-2xl font-bold text-center text-gray-800 md:text-3xl">Register form</h1>

@@ -30,13 +30,13 @@
       password: password,
     })
   
-      if (data) {
-        console.log("auth ok", data);
+    if(error) alert("error login", error)
+    else {
+        console.log("login ok", data);
         goto("/todo")
-      } else {
-        console.log("auth err ", error);
-      }
+      } 
     }
+    
     
 </script>
 
