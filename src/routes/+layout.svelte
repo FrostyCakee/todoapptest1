@@ -1,11 +1,8 @@
 <script>
     import { supabase } from "../supabase.js";
     import "../app.css";
-	import Auth from "../components/Auth.svelte";
-    //import { user } from "../stores/authStore.js";
 	import { loadTodos } from "../stores/todoStore.js";
 	import Navbar from "../components/Navbar.svelte";
-	import Reg from "../components/Reg.svelte";
 	import Navbar1 from "../components/Navbar1.svelte";
 
 	let user;
@@ -36,7 +33,5 @@
     {:else}
         <Navbar1/>
         <slot></slot>
-        <!-- <Auth/>
-        <Reg/> -->
 	{/if}
 </div>
