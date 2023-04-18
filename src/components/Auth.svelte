@@ -2,26 +2,8 @@
     import {supabase} from "../supabase.js";
     import { goto } from '$app/navigation';
   
-
-    // let loading = false;
     let email = '';
     let password = '';
-
-    // const handleLogin = async () => {
-    //     try {
-    //     loading = true;
-    //     console.log(email);
-    //     const {error} = await supabase.auth.signInWithOtp({email});
-
-    //     if(error) throw error;
-    //     alert('Check your email for the login link!')
-    //     }catch(error){
-    //         console.error(error)
-    //         alert(error.error_description || error.message)
-    //     }finally {
-    //         loading = false;
-    //     }
-    // }
 
     async function handleLogin() {
       console.log("auth", email, password);
